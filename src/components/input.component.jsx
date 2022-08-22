@@ -16,7 +16,7 @@ const Input = ({
       <div className="flex flex-col w-[100%] pt-4 md:w-[100%]">
         <label
           htmlFor={id}
-          className="font-semibold text-lg text-[hsl(278,68%,11%)] mb-3 tracking-wide md:text-sm"
+          className="font-semibold text-lg text-[hsl(278,68%,11%)] mb-3 tracking-wide md:text-sm md:mb-1"
         >
           {" "}
           {label}
@@ -35,7 +35,7 @@ const Input = ({
         />
 
         <h1 className="text-red-600" ref={error}>
-          error
+        
         </h1>
       </div>
     </div>

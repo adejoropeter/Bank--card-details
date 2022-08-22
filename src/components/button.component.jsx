@@ -7,7 +7,7 @@ const BUTTON = ({ children, hover }) => {
         hover ? "group" : null
       }`}
     >
-      <span className="hover:text-black">{children}</span>
+      <span className="group hover:text-black">{children}</span>
     </button>
   );
 };

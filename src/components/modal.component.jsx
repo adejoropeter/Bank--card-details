@@ -1,20 +1,36 @@
 import React from "react";
 import BUTTON from "./button.component";
-import {ReactComponent as icon } from "../icon-complete.svg";
-const Modal = ({ modal, string, num }) => {
+import CompletedImage from "./istockphoto-1341550573-612x612.jpg";
+const Modal = ({ modal, string, num, dateyr, datemth, cvcNum }) => {
   return (
-    <div
-      className="flex flex-col"
-      onDoubleClick={() => {
-        modal(false);
-        num("0000 0000 0000 0000");
-        string("ADEJORO PETER");
-      }}
-    >
-      <div>
-        <img src={icon} alt="complete icon"/>
+    <div className=" lg:h-[100vh] lg:w-[70vw] md:w-[75%] md:h-[100vh] mt-[4rem] md-">
+      <div
+        onClick={() => {
+          modal(false);
+          num("0000000000000000");
+          string("ADEBAYOR FAVOUR");
+          datemth("00");
+          dateyr("00");
+          cvcNum("123");
+        }}
+        className="text-black"
+      >
+        back
       </div>
-      <BUTTON>Continue</BUTTON>
+      <div className=" h-[50vh] flex flex-col justify-between items-center">
+        <div className="bg-purple-700 h-fit w-fit p-10 rounded-full mb-4">
+          <img src={CompletedImage} className="w-24 h-24 rounded-full" />
+        </div>
+        <div>
+          <h1 className="text-[hsl(278, 68%, 11%)] text-[2rem] font-bold text-center tracking-widest">
+            THANK YOU!
+          </h1>
+          <p className="text-[hsl(279, 6%, 55%)] text-xl tracking-wider">
+            We've added your card details
+          </p>
+        </div>
+        <BUTTON>Continue</BUTTON>
+      </div>
     </div>
   );
 };
