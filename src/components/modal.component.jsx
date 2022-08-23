@@ -3,7 +3,7 @@ import BUTTON from "./button.component";
 import CompletedImage from "./istockphoto-1341550573-612x612.jpg";
 const Modal = ({ modal, string, num, dateyr, datemth, cvcNum }) => {
   return (
-    <div className=" lg:h-[100vh] lg:w-[70vw] md:w-[75%] md:h-[100vh] mt-[4rem] md-">
+    <div className=" w-[100%] md:max-w-[20rem] mt-[2rem]  md:ml-14 ">
       <div
         onClick={() => {
           modal(false);
@@ -13,9 +13,9 @@ const Modal = ({ modal, string, num, dateyr, datemth, cvcNum }) => {
           dateyr("00");
           cvcNum("123");
         }}
-        className="text-black"
+        className="text-black cursor-pointer"
       >
-        back
+        Back
       </div>
       <div className=" h-[50vh] flex flex-col justify-between items-center">
         <div className="bg-purple-700 h-fit w-fit p-10 rounded-full mb-4">
